@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="buttonStyle1" >
+        <item name="android:radius">200dp</item>
+    </style>
+</resources>

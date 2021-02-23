@@ -12,3 +12,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 }
+
+
+
+
+
+
+
+
+///алелльні гени розміщені в гомологічних хромосомах на одному рівні(локус) і відповідають за прояв протилежних ознак
+//алелі це різні стани одного гена
