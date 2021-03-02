@@ -9,8 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ColorHelper">
-        <activity android:name=".Info"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".NewColorActivity"></activity>
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".Info" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

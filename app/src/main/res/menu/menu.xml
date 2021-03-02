@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/related"
         android:title="related"
-        
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_link"
         />
-    <item android:id="@+id/info"
-        android:title="related"
-
+    <item
+        android:id="@+id/info"
+        android:title="info"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_information"
         />
     <item android:id="@+id/history"
-        android:title="related"
-
+        android:title="history"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_history"
         />
-
 </menu>
