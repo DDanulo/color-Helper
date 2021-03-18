@@ -1,14 +1,19 @@
 package com.example.colorhelper;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -19,7 +24,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     FloatingActionButton fab;
     BottomNavigationView bottomNavigationView;
-
+    FrameLayout choosenColor;
+    FrameLayout complementaryColor;
+    String colorValue;
+    TextView tw;
+    double anglerotation = 1d / 12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,16 +36,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         bottomNavigationView = findViewById(R.id.bottom_nav);
-        
+        tw = findViewById(R.id.textView);
 
         fab = findViewById(R.id.fab);
+        choosenColor = findViewById(R.id.flColorChoosen);
+        complementaryColor = findViewById(R.id.flCompColor);
         fab.setOnClickListener(this);
+
     }
-
-
-
-
-
 
 
     @Override
@@ -44,80 +51,67 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(v.getId()){
             case R.id.fab:
                 Intent intent = new Intent(this, NewColorActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, 1);
                 break;
         }
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        colorValue = data.getStringExtra("colorValue");
+        choosenColor.setBackgroundColor(Color.parseColor("#"+colorValue));
+//        tw.setText(leftAnalogousColor());
+        complementaryColor.setBackgroundColor(Color.parseColor("#"+ComplementaryColor()));
+    }
+
+//    public String leftAnalogousColor(){
+//
+//        String rS1 = colorValue.substring(0,2);
+//        String gS1 = colorValue.substring(2,4);
+//        String bS1 = colorValue.substring(4,6);
+//
+//        int r1 = Integer.parseInt(rS1, 16);
+//        int g1 = Integer.parseInt(gS1, 16);
+//        int b1 = Integer.parseInt(bS1, 16);
+//
+//        int color = Color.rgb(r1, g1, b1);
+//        int red = Color.red(color);
+//        int green = Color.green(color);
+//        int blue = Color.blue(color);
+//
+//        float[] hsv = new float[3];
+//        Color.RGBToHSV(red, green, blue, hsv);
+//
+//        float hue = hsv[0];
+//        float sat = hsv[1];
+//        float val = hsv[2];
+//        double anglerotation = 1d / 12;
+//
+//        int leftColor = Color.HSVToColor(hsv);
+//        red = Color.red(leftColor);
+//        green = Color.green(leftColor);
+//        blue = Color.blue(leftColor);
+//
+////        return red, green, blue;
+//        return Integer.toHexString(red) + "" + Integer.toHexString(green) + "" + Integer.toHexString(blue);
+//    }
+
+    public String ComplementaryColor(){
+        String rS1 = colorValue.substring(0,2);
+        String gS1 = colorValue.substring(2,4);
+        String bS1 = colorValue.substring(4,6);
+//        int complColor = Integer.parseInt(colorValue, 16);
+        int r1 = Integer.parseInt(rS1, 16);
+        int g1 = Integer.parseInt(gS1, 16);
+        int b1 = Integer.parseInt(bS1, 16);
+
+        int x = Math.max(r1, Math.max(g1, b1)) + Math.min(r1, Math.min(g1, b1));
+        int r2 =  x - r1;
+        int g2 =  x - g1;
+        int b2 =  x - b1;
+
+        return Integer.toHexString(r2) + "" + Integer.toHexString(g2) + "" + Integer.toHexString(b2);
+    }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//                switch (item.getItemId()) {
-//                    case R.id.info:
-//                        Intent intent = new Intent(MainActivity.this, Info.class);
-//                        startActivity(intent);
-//                        break;
-//                    case R.id.related:
-//                        Intent intent1 = new Intent(MainActivity.this, MainActivity.class);
-//                        startActivity(intent1);
-//                        break;
-//                    case R.id.history:
-//                        Intent intent2 = new Intent(MainActivity.this, HistoryActivity.class);
-//                        startActivity(intent2);
-//                        break;
-//                }
-//                return true;
-//            }
-//        });

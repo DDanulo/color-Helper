@@ -8,9 +8,8 @@
 
 
 
-
     <FrameLayout
-        android:id="@+id/frameLayout4"
+        android:id="@+id/flSplitComp"
         style="@style/buttonStyle1"
         android:layout_width="333dp"
         android:layout_height="45dp"
@@ -27,7 +26,7 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/frameLayout"
+        android:id="@+id/flColorChoosen"
         android:layout_width="333dp"
         android:layout_height="45dp"
         android:elevation="10dp"
@@ -136,7 +135,7 @@
         app:layout_constraintVertical_bias="0.794" />
 
     <FrameLayout
-        android:id="@+id/frameLayout2"
+        android:id="@+id/flCompColor"
         style="@style/buttonStyle1"
         android:layout_width="333dp"
         android:layout_height="45dp"
