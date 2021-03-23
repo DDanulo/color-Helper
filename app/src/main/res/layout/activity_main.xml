@@ -7,20 +7,19 @@
     tools:context=".MainActivity">
 
 
-
     <FrameLayout
-        android:id="@+id/flSplitComp"
+        android:id="@+id/flLeftSplitComp"
         style="@style/buttonStyle1"
-        android:layout_width="333dp"
+        android:layout_width="111dp"
         android:layout_height="45dp"
-        android:elevation="10dp"
         android:background="@drawable/round_corners"
+        android:elevation="10dp"
         android:outlineSpotShadowColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toStartOf="@+id/flSplitComp"
+        app:layout_constraintHorizontal_bias="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.228">
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
 
     </FrameLayout>
@@ -159,8 +158,8 @@
         android:elevation="10dp"
         android:outlineSpotShadowColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintEnd_toStartOf="@+id/flAnalogous"
+        app:layout_constraintHorizontal_bias="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
@@ -265,9 +264,44 @@
         android:outlineSpotShadowColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.873"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/flAnalogous"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flSplitComp"
+        style="@style/buttonStyle1"
+        android:layout_width="111dp"
+        android:layout_height="45dp"
+        android:background="@drawable/round_corners"
+        android:elevation="10dp"
+        android:outlineSpotShadowColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.515">
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flRightSplitComp"
+        style="@style/buttonStyle1"
+        android:layout_width="111dp"
+        android:layout_height="45dp"
+        android:background="@drawable/round_corners"
+        android:elevation="10dp"
+        android:outlineSpotShadowColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/flSplitComp"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.5">
 
 
     </FrameLayout>

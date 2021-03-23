@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     FrameLayout leftAnalagous;
     FrameLayout rightAnalogous;
     FrameLayout centralAnalogous;
+    FrameLayout leftSplitComp;
+    FrameLayout cenatralSplitComp;
+    FrameLayout rightSplitComp;
 
     String colorValue;
     TextView tw;
@@ -51,6 +54,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         choosenColor = findViewById(R.id.flColorChoosen);
         complementaryColor = findViewById(R.id.flCompColor);
         leftAnalagous = findViewById(R.id.flLeftAnalogous);
+        leftSplitComp = findViewById(R.id.flLeftSplitComp);
+        rightSplitComp = findViewById(R.id.flRightSplitComp);
+        cenatralSplitComp = findViewById(R.id.flSplitComp);
         fab.setOnClickListener(this);
 
     }
@@ -73,9 +79,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         choosenColor.setBackgroundColor(Color.parseColor("#"+colorValue));
 //        tw.setText();
         centralAnalogous.setBackgroundColor(Color.parseColor("#"+colorValue));
+        cenatralSplitComp.setBackgroundColor(Color.parseColor("#"+colorValue));
         rightAnalogous.setBackgroundColor(Color.parseColor("#"+RightAnalogousColor()));
         leftAnalagous.setBackgroundColor(Color.parseColor("#"+ leftAnalogousColor()));
         complementaryColor.setBackgroundColor(Color.parseColor("#"+ComplementaryColor()));
+        leftSplitComp.setBackgroundColor(Color.parseColor("#"+leftSplitCOmplementary()));
+        rightSplitComp.setBackgroundColor(Color.parseColor("#"+rightSplitCOmplementary()));
+
     }
 
     public String leftAnalogousColor(){
@@ -130,6 +140,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         float[] hsv = new float[3];
         Color.RGBToHSV(red, green, blue, hsv);
 //        tw.setText(String.valueOf(hsv[0]));
+
         float hue = hsv[0];
         float sat = hsv[1];
         float val = hsv[2];
@@ -161,6 +172,76 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int b2 =  x - b1;
 
         return Integer.toHexString(r2) + "" + Integer.toHexString(g2) + "" + Integer.toHexString(b2);
+    }
+
+    public String leftSplitCOmplementary(){
+        String rS1 = colorValue.substring(0,2);
+        String gS1 = colorValue.substring(2,4);
+        String bS1 = colorValue.substring(4,6);
+//        int complColor = Integer.parseInt(colorValue, 16);
+        int r1 = Integer.parseInt(rS1, 16);
+        int g1 = Integer.parseInt(gS1, 16);
+        int b1 = Integer.parseInt(bS1, 16);
+
+        int x = Math.max(r1, Math.max(g1, b1)) + Math.min(r1, Math.min(g1, b1));
+        int r2 =  x - r1;
+        int g2 =  x - g1;
+        int b2 =  x - b1;
+
+        int color = Color.rgb(r2, g2, b2);
+        int red = Color.red(color);
+        int green = Color.green(color);
+        int blue = Color.blue(color);
+
+        float[] hsv = new float[3];
+        Color.RGBToHSV(red, green, blue, hsv);
+//        tw.setText(String.valueOf(hsv[0]));
+
+        float anglerotation = 30f;
+
+        hsv[0] += anglerotation;
+//        tw2.setText(String.valueOf(hsv[0]));
+        int leftColor = Color.HSVToColor(hsv);
+        red = Color.red(leftColor);
+        green = Color.green(leftColor);
+        blue = Color.blue(leftColor);
+
+        return Integer.toHexString(red) + "" + Integer.toHexString(green) + "" + Integer.toHexString(blue);
+    }
+
+    public String rightSplitCOmplementary(){
+        String rS1 = colorValue.substring(0,2);
+        String gS1 = colorValue.substring(2,4);
+        String bS1 = colorValue.substring(4,6);
+//        int complColor = Integer.parseInt(colorValue, 16);
+        int r1 = Integer.parseInt(rS1, 16);
+        int g1 = Integer.parseInt(gS1, 16);
+        int b1 = Integer.parseInt(bS1, 16);
+
+        int x = Math.max(r1, Math.max(g1, b1)) + Math.min(r1, Math.min(g1, b1));
+        int r2 =  x - r1;
+        int g2 =  x - g1;
+        int b2 =  x - b1;
+
+        int color = Color.rgb(r2, g2, b2);
+        int red = Color.red(color);
+        int green = Color.green(color);
+        int blue = Color.blue(color);
+
+        float[] hsv = new float[3];
+        Color.RGBToHSV(red, green, blue, hsv);
+//        tw.setText(String.valueOf(hsv[0]));
+
+        float anglerotation = 30f;
+
+        hsv[0] -= anglerotation;
+//        tw2.setText(String.valueOf(hsv[0]));
+        int leftColor = Color.HSVToColor(hsv);
+        red = Color.red(leftColor);
+        green = Color.green(leftColor);
+        blue = Color.blue(leftColor);
+
+        return Integer.toHexString(red) + "" + Integer.toHexString(green) + "" + Integer.toHexString(blue);
     }
 
 }
