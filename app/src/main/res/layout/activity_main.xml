@@ -152,17 +152,17 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/frameLayout3"
-        android:layout_width="333dp"
+        android:id="@+id/flLeftAnalogous"
+        android:layout_width="111dp"
         android:layout_height="45dp"
-        android:elevation="10dp"
         android:background="@drawable/round_corners"
+        android:elevation="10dp"
         android:outlineSpotShadowColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.017">
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
 
     </FrameLayout>
@@ -241,7 +241,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <FrameLayout
+        android:id="@+id/flAnalogous"
+        android:layout_width="111dp"
+        android:layout_height="45dp"
+        android:background="@drawable/round_corners"
+        android:elevation="10dp"
+        android:outlineSpotShadowColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flRightAnalogous"
+        android:layout_width="111dp"
+        android:layout_height="45dp"
+        android:background="@drawable/round_corners"
+        android:elevation="10dp"
+        android:outlineSpotShadowColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+
+    </FrameLayout>
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
 <!--        android:layout_width="56dp"-->
 <!--        android:layout_height="56dp"-->
 <!--        android:layout_marginBottom="16dp"-->
