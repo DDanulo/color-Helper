@@ -1,4 +1,4 @@
-package com.example.colorhelper;
+package com.example.colorhelper.tabs.fragments;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.colorhelper.History;
+import com.example.colorhelper.R;
 
 import java.util.List;
 

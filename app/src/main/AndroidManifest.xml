@@ -13,10 +13,10 @@
             android:screenOrientation="portrait"></activity>
         <activity android:name=".HistoryActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Info"
+        <activity android:name=".InfoActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".tabs.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

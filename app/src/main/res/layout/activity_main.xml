@@ -4,231 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".tabs.MainActivity">
 
-
-    <FrameLayout
-        android:id="@+id/flLeftSplitComp"
-        style="@style/buttonStyle1"
-        android:layout_width="111dp"
-        android:layout_height="45dp"
-        android:background="@drawable/round_corners"
-        android:elevation="10dp"
-        android:outlineSpotShadowColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toStartOf="@+id/flSplitComp"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
-
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/flColorChoosen"
-        android:layout_width="333dp"
-        android:layout_height="45dp"
-        android:elevation="10dp"
-        android:padding="10dp"
-        android:background="@drawable/round_corners"
-        android:outlineSpotShadowColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        style="@style/buttonStyle1"
-        app:layout_constraintVertical_bias="0.015">
-
-
-    </FrameLayout>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="chosen color"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.019" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Complementary color"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.151" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Analogous color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Split complementary color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Triadic color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tetredic color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.676" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Monochromatic color"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.794" />
-
-    <FrameLayout
-        android:id="@+id/flCompColor"
-        style="@style/buttonStyle1"
-        android:layout_width="333dp"
-        android:layout_height="45dp"
-        android:elevation="10dp"
-        android:background="@drawable/round_corners"
-        android:outlineSpotShadowColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.021">
-
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/flLeftAnalogous"
-        android:layout_width="111dp"
-        android:layout_height="45dp"
-        android:background="@drawable/round_corners"
-        android:elevation="10dp"
-        android:outlineSpotShadowColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/flAnalogous"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
-
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frameLayout5"
-        style="@style/buttonStyle1"
-        android:layout_width="333dp"
-        android:layout_height="45dp"
-        android:elevation="10dp"
-        android:background="@drawable/round_corners"
-        android:outlineSpotShadowColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.439">
-
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frameLayout6"
-        style="@style/buttonStyle1"
-        android:layout_width="333dp"
-        android:layout_height="45dp"
-        android:elevation="10dp"
-        android:background="@drawable/round_corners"
-        android:outlineSpotShadowColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.62">
-
-
-    </FrameLayout>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:elevation="10dp"
-        android:id="@+id/fab"
-        app:backgroundTint="@color/black"
-        app:tint="@color/white"
-        android:src="@drawable/ic_plus__1_"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <FrameLayout
-        android:id="@+id/frameLayout7"
-        style="@style/buttonStyle1"
-        android:layout_width="333dp"
-        android:layout_height="45dp"
-        android:elevation="10dp"
-        android:background="@drawable/round_corners"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.814">
-
-    </FrameLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
@@ -240,83 +21,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <FrameLayout
-        android:id="@+id/flAnalogous"
-        android:layout_width="111dp"
-        android:layout_height="45dp"
-        android:background="@drawable/round_corners"
-        android:elevation="10dp"
-        android:outlineSpotShadowColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
-
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/flRightAnalogous"
-        android:layout_width="111dp"
-        android:layout_height="45dp"
-        android:background="@drawable/round_corners"
-        android:elevation="10dp"
-        android:outlineSpotShadowColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toEndOf="@+id/flAnalogous"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
-
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/flSplitComp"
-        style="@style/buttonStyle1"
-        android:layout_width="111dp"
-        android:layout_height="45dp"
-        android:background="@drawable/round_corners"
-        android:elevation="10dp"
-        android:outlineSpotShadowColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.515">
-
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/flRightSplitComp"
-        style="@style/buttonStyle1"
-        android:layout_width="111dp"
-        android:layout_height="45dp"
-        android:background="@drawable/round_corners"
-        android:elevation="10dp"
-        android:outlineSpotShadowColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toEndOf="@+id/flSplitComp"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.5">
-
-
-    </FrameLayout>
-
-    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
 <!--        android:layout_width="56dp"-->
 <!--        android:layout_height="56dp"-->
 <!--        android:layout_marginBottom="16dp"-->
 <!--        android:layout_marginEnd="16dp"-->
 <!--        android:elevation="10dp"-->
 <!--        android:id="@+id/fab"-->
+<!--        app:backgroundTint="@color/black"-->
+<!--        app:tint="@color/white"-->
 <!--        android:src="@drawable/ic_plus__1_"-->
 <!--        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"-->
 <!--        app:layout_constraintEnd_toEndOf="parent"-->
 <!--        app:layout_constraintHorizontal_bias="0.954"-->
 <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
