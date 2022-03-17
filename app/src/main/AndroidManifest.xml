@@ -11,8 +11,6 @@
         android:theme="@style/Theme.ColorHelper">
         <activity android:name=".NewColorActivity"
             android:screenOrientation="portrait"></activity>
-        <activity android:name=".HistoryActivity"
-            android:screenOrientation="portrait"/>
         <activity android:name=".InfoActivity"
             android:screenOrientation="portrait"/>
         <activity

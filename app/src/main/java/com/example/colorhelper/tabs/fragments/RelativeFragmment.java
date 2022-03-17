@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.colorhelper.NewColorActivity;
 import com.example.colorhelper.R;
+import com.example.colorhelper.tabs.MainActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -50,6 +51,25 @@ public class RelativeFragmment extends Fragment implements View.OnClickListener{
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        MainActivity mainActivity = (MainActivity) requireActivity();
+        colorValue = mainActivity.color;
+        choosenColor.setBackgroundColor(Color.parseColor("#"+colorValue));
+//        tw.setText();
+        centralAnalogous.setBackgroundColor(Color.parseColor("#"+colorValue));
+        cenatralSplitComp.setBackgroundColor(Color.parseColor("#"+colorValue));
+        centralTriadic.setBackgroundColor(Color.parseColor("#"+colorValue));
+        rightAnalogous.setBackgroundColor(Color.parseColor("#"+RightAnalogousColor()));
+        leftAnalagous.setBackgroundColor(Color.parseColor("#"+ leftAnalogousColor()));
+        complementaryColor.setBackgroundColor(Color.parseColor("#"+ComplementaryColor()));
+        leftSplitComp.setBackgroundColor(Color.parseColor("#"+leftSplitCOmplementary()));
+        rightSplitComp.setBackgroundColor(Color.parseColor("#"+rightSplitCOmplementary()));
+        rightTriadic.setBackgroundColor(Color.parseColor("#"+rightTriadic()));
+        leftTriadic.setBackgroundColor(Color.parseColor("#"+lefttriadic()));
+    }
+
+    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
@@ -80,6 +100,7 @@ public class RelativeFragmment extends Fragment implements View.OnClickListener{
                 Intent intent = new Intent(v.getContext(), NewColorActivity.class);
                 startActivityForResult(intent, 1);
                 break;
+                
         }
     }
 
@@ -87,6 +108,8 @@ public class RelativeFragmment extends Fragment implements View.OnClickListener{
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         colorValue = data.getStringExtra("colorValue");
+        MainActivity mainActivity = (MainActivity) requireActivity();
+        mainActivity.color = colorValue;
         choosenColor.setBackgroundColor(Color.parseColor("#"+colorValue));
 //        tw.setText();
         centralAnalogous.setBackgroundColor(Color.parseColor("#"+colorValue));
@@ -111,6 +134,16 @@ public class RelativeFragmment extends Fragment implements View.OnClickListener{
         int r1 = Integer.parseInt(rS1, 16);
         int g1 = Integer.parseInt(gS1, 16);
         int b1 = Integer.parseInt(bS1, 16);
+
+        if (r1 < 16){
+            r1 = 16;
+        }
+        if (g1 < 16){
+            g1 = 16;
+        }
+        if (b1 < 16){
+            b1 = 16;
+        }
 
         int color = Color.rgb(r1, g1, b1);
         int red = Color.red(color);
@@ -146,6 +179,16 @@ public class RelativeFragmment extends Fragment implements View.OnClickListener{
         int g1 = Integer.parseInt(gS1, 16);
         int b1 = Integer.parseInt(bS1, 16);
 
+        if (r1 < 16){
+            r1 = 16;
+        }
+        if (g1 < 16){
+            g1 = 16;
+        }
+        if (b1 < 16){
+            b1 = 16;
+        }
+
         int color = Color.rgb(r1, g1, b1);
         int red = Color.red(color);
         int green = Color.green(color);
@@ -179,6 +222,16 @@ public class RelativeFragmment extends Fragment implements View.OnClickListener{
         int g1 = Integer.parseInt(gS1, 16);
         int b1 = Integer.parseInt(bS1, 16);
 
+        if (r1 < 16){
+            r1 = 16;
+        }
+        if (g1 < 16){
+            g1 = 16;
+        }
+        if (b1 < 16){
+            b1 = 16;
+        }
+
         int x = Math.max(r1, Math.max(g1, b1)) + Math.min(r1, Math.min(g1, b1));
         int r2 =  x - r1;
         int g2 =  x - g1;
@@ -196,6 +249,16 @@ public class RelativeFragmment extends Fragment implements View.OnClickListener{
         int r1 = Integer.parseInt(rS1, 16);
         int g1 = Integer.parseInt(gS1, 16);
         int b1 = Integer.parseInt(bS1, 16);
+
+        if (r1 < 16){
+            r1 = 16;
+        }
+        if (g1 < 16){
+            g1 = 16;
+        }
+        if (b1 < 16){
+            b1 = 16;
+        }
 
         int x = Math.max(r1, Math.max(g1, b1)) + Math.min(r1, Math.min(g1, b1));
         int r2 =  x - r1;
@@ -235,6 +298,16 @@ public class RelativeFragmment extends Fragment implements View.OnClickListener{
         int g1 = Integer.parseInt(gS1, 16);
         int b1 = Integer.parseInt(bS1, 16);
 
+        if (r1 < 16){
+            r1 = 16;
+        }
+        if (g1 < 16){
+            g1 = 16;
+        }
+        if (b1 < 16){
+            b1 = 16;
+        }
+
         int x = Math.max(r1, Math.max(g1, b1)) + Math.min(r1, Math.min(g1, b1));
         int r2 =  x - r1;
         int g2 =  x - g1;
@@ -273,6 +346,16 @@ public class RelativeFragmment extends Fragment implements View.OnClickListener{
         int g1 = Integer.parseInt(gS1, 16);
         int b1 = Integer.parseInt(bS1, 16);
 
+        if (r1 < 16){
+            r1 = 16;
+        }
+        if (g1 < 16){
+            g1 = 16;
+        }
+        if (b1 < 16){
+            b1 = 16;
+        }
+
         int x = Math.max(r1, Math.max(g1, b1)) + Math.min(r1, Math.min(g1, b1));
         int r2 =  x - r1;
         int g2 =  x - g1;
@@ -288,7 +371,7 @@ public class RelativeFragmment extends Fragment implements View.OnClickListener{
 
         float anglerotation = 30f;
 
-        if(hsv[0] + anglerotation > 360){
+        if(hsv[0] + anglerotation >= 360){
             hsv[0] = (hsv[0]+anglerotation) - 360;
         }else{
             hsv[0] += anglerotation;
@@ -310,6 +393,16 @@ public class RelativeFragmment extends Fragment implements View.OnClickListener{
         int r1 = Integer.parseInt(rS1, 16);
         int g1 = Integer.parseInt(gS1, 16);
         int b1 = Integer.parseInt(bS1, 16);
+
+        if (r1 < 16){
+            r1 = 16;
+        }
+        if (g1 < 16){
+            g1 = 16;
+        }
+        if (b1 < 16){
+            b1 = 16;
+        }
 
         int x = Math.max(r1, Math.max(g1, b1)) + Math.min(r1, Math.min(g1, b1));
         int r2 =  x - r1;

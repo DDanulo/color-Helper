@@ -130,7 +130,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.794" />
+        app:layout_constraintVertical_bias="0.794"
+        android:visibility="invisible"/>
 
     <FrameLayout
         android:id="@+id/flCompColor"
@@ -193,8 +194,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:layout_constraintVertical_bias="0.62">
-
-
     </FrameLayout>
 
 
@@ -210,7 +209,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.814">
+        app:layout_constraintVertical_bias="0.814"
+        android:visibility="invisible">
 
     </FrameLayout>
 

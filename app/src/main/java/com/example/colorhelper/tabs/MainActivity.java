@@ -28,11 +28,13 @@ public class MainActivity extends AppCompatActivity  {
 
     public static String TAB_KEY = "Tab";
 
+    public String color = "ff10ff";
 
-    public int getTag() {
+
+    public int getTag()  {
         return tag;
     }
-
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,8 +68,5 @@ public class MainActivity extends AppCompatActivity  {
                 return true;
             }
         });
-
     }
-
-
 }
